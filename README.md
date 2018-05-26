@@ -2,6 +2,8 @@
 ubuntuguide
 
 # For disk install
+cheak Secure Boot:OFF
+UEFI should be off
 
 500GB
 主分区：
@@ -13,6 +15,8 @@ etx4>=10G
 
 
 # For initial apt source
+# sudo gedit /etc/apt/sources.list  
+
 #sjtu(上海交通大学更新服务器)
 deb http://ftp.sjtu.edu.cn/ubuntu/ lucid main multiverse restricted universe
 deb http://ftp.sjtu.edu.cn/ubuntu/ lucid-backports main multiverse restricted universe
@@ -43,3 +47,32 @@ deb http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted
 deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security universe
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse
+
+#then terminal input 
+sudo apt-get update 
+
+
+#necessary apt：
+	#openssh-server
+		sudo apt-get install openssh-server
+		#是否启动：
+		#ps -e |grep ssh
+		
+	#teamviewer-host
+	sudo apt-get install teamviewer-host
+	
+	
+	#pycharm 
+	sudo apt-get install pycharm-community
+	
+	
+	#Anconda
+	#https://www.anaconda.com/download/#linux
+	
+	
+	
+	
+	
+	
+
+
