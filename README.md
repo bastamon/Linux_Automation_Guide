@@ -53,21 +53,25 @@ sudo apt-get update
 
 
 #necessary apt：
+	
+	sudo apt install python-pip
+	sudo apt-get install git
+	sudo apt-get install teamviewer-host
 	#openssh-server
 		sudo apt-get install openssh-server
 		#是否启动：
 		#ps -e |grep ssh
-		
-	#teamviewer-host
-	sudo apt-get install teamviewer-host
+
+	
 	
 	
 	#pycharm 
 	sudo apt-get install pycharm-community
 	
 	
-	#Anconda
+	#Anconda 推荐2.7
 	#https://www.anaconda.com/download/#linux
+	
 	
 	
 	
