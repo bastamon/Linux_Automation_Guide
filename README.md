@@ -53,7 +53,8 @@ sudo apt-get update
 
 
 #necessary apt：
-	
+	sudo apt-get install build-essential //有可能安装 build-essential 后gdb就已经安装过了  
+	sudo apt-get install gdb 
 	sudo apt install python-pip
 	sudo apt-get install git
 	sudo apt-get install teamviewer-host
@@ -66,14 +67,38 @@ sudo apt-get update
 	
 	
 	#pycharm 
-	sudo apt-get install pycharm-community
+		sudo apt-get install pycharm-community
 	
 	
 	#Anconda 推荐2.7
-	#https://www.anaconda.com/download/#linux
+		#https://www.anaconda.com/download/#linux
 	
-	
-	
+	#codeblocks
+		sudo add-apt-repository ppa:damien-moore/codeblocks-stable  
+		sudo apt-get update  
+		sudo apt-get install codeblocks  
+		#将会同时安装下列软件：  
+		#codeblocks-common libcodeblocks0 libwxbase2.8-0 libwxgtk2.8-0  
+		#建议安装：  
+		#libwxgtk2.8-dev | libwxgtk3.0-dev wx-common codeblocks-contrib   
+		sudo apt-get install codeblocks-dbg  
+		sudo apt-get install codeblocks-contrib  
+		#将会同时安装下列软件：  
+		#cccc codeblocks-contrib-common codeblocks-libwxcontrib0 cppcheck cscope  
+		#gamin libgamin0 libtinyxml2-2v5 libwxsmithlib0 python-chardet  
+		#python-pkg-resources python-pygments valgrind  
+		#建议安装：  
+		#cscope-el python-setuptools ttf-bitstream-vera valgrind-dbg kcachegrind  
+		#alleyoop valkyrie   
+		sudo apt-get install valgrind-dbg  
+		#Valgrind 用来探测内存泄露 
+		sudo apt-get install libwxbase3.0  
+		sudo apt-get install libwxbase3.0-dev  
+		sudo apt-get install libwxgtk3.0-0  
+		sudo apt-get install libwxgtk3.0-dev  
+		sudo apt-get install wx-common  
+		sudo apt-get install wx3.0-headers  
+		sudo apt-get install wx3.0-i18n
 	
 	
 	
