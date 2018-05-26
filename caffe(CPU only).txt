@@ -47,7 +47,6 @@ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 	#如果所有测试都通过，则说明安装好了。
 	
 	
-	
 #第4部分:测试
 	#测试Caffe的Python接口，切换到caffe/python文件目录下，记录下来当前路径，输入以下命令：
 		export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH  		
