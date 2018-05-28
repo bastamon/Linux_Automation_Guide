@@ -50,7 +50,9 @@ deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse
 
 #then terminal input 
 sudo apt-get update 
-
+wget https://launchpad.net/ubuntu-kylin-software-center/1.3/1.3.14/+download/ubuntu-kylin-software-center_1.3.14-0%7E349%7Eubuntu16.04.1_all.deb
+wget https://download.teamviewer.com/download/linux/teamviewer-host_amd64.deb
+wget https://repo.anaconda.com/archive/Anaconda2-5.1.0-Linux-x86_64.sh
 
 #necessary apt：
 	sudo apt-get install build-essential //有可能安装 build-essential 后gdb就已经安装过了  
@@ -72,6 +74,7 @@ sudo apt-get update
 	
 	#Anconda 推荐2.7
 		#https://www.anaconda.com/download/#linux
+		wget https://repo.anaconda.com/archive/Anaconda2-5.1.0-Linux-x86_64.sh
 	
 	#codeblocks
 		sudo add-apt-repository ppa:damien-moore/codeblocks-stable  
