@@ -7,15 +7,16 @@ UEFI should be off
 
 500GB
 主分区：
-efi分区bootloader>=64MB
-etx4>=10G
+#efi分区bootloader>=64MB
+etx4>=32G
 逻辑分区:
-/boot     >=1GB
-/home   >=other
+swap = 2 * RAM
+/boot     >=256 MB
+/home   >= other
 
 
 # For initial apt source
-# sudo gedit /etc/apt/sources.list  
+sudo vi /etc/apt/sources.list  
 
 #sjtu(上海交通大学更新服务器)
 deb http://ftp.sjtu.edu.cn/ubuntu/ lucid main multiverse restricted universe
@@ -29,7 +30,7 @@ deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-proposed main multiverse restricted
 deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-security main multiverse restricted universe
 deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-updates main multiverse restricted universe  
 
-
+# Northeastern University
 deb-src http://mirror.neu.edu.cn/ubuntu/ xenial main restricted #Added by software-properties
 deb http://mirror.neu.edu.cn/ubuntu/ xenial main restricted
 deb-src http://mirror.neu.edu.cn/ubuntu/ xenial restricted multiverse universe #Added by software-properties
@@ -48,6 +49,8 @@ deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted multive
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security universe
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse
 
+
+# Tsinghua University
 # deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted
@@ -61,6 +64,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse
 
 
+# Aliyun
 # deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
 deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
@@ -97,6 +101,10 @@ deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe
 
 
 #then terminal input 
+sudo add-apt-repository ppa:mystic-mirage/pycharm
+
+
+
 sudo apt-get update 
 wget https://launchpad.net/ubuntu-kylin-software-center/1.3/1.3.14/+download/ubuntu-kylin-software-center_1.3.14-0%7E349%7Eubuntu16.04.1_all.deb
 wget https://download.teamviewer.com/download/linux/teamviewer-host_amd64.deb
