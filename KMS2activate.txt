@@ -1,0 +1,44 @@
+ 在Ubuntu中搭建KMS服务器
+介绍
+
+基于vlmcsd搭建的KMS服务器。
+根据github上的说明，这个工具是用C写的，没有任何依赖，可以直接运行。而且它横跨几乎现在所有的系统平台，如Android, FreeBSD, Solaris, Minix, Mac OS, iOS, Windows。相比于另一款工具py-kms需要依赖pyhont2或者python3，可谓是非常干净舒爽。
+本文同步更新地址:在Ubuntu中搭建KMS服务器
+安装
+
+1、在任意环境中，下载最新的vlmcsd releases版本，https://github.com/Wind4/vlmcsd/releases。如在linux中，可以使用wget下载：
+
+wget https://github.com/Wind4/vlmcsd/releases/download/svn1111/binaries.tar.gz
+
+2、解压我们下载的包，进入对应的目录。如Ubuntu系统，我们可以进入binaries/Linux/intel/static目录中
+
+3、选择对应的文件，这里我们选择vlmcsdmulti-x64-musl-static文件。然后把这个文件放到我们想要的文件中。
+
+4、执行chmod命令，为这个文件赋予权限：
+
+chmod u+x /usr/local/KMS-server
+
+权限赋予完毕之后，直接执行命令
+
+./vlmcsdmulti-x64-musl-static vlmcsd
+
+如果没有任何错误提示，代表我们成功了。不放心的话，可以再执行一遍，会提示我们端口(1688)和地址已经被占用。
+
+5、若有防火墙，记得把1688端口开放，然后加入自启动。如在Ubuntu中，可以编辑/etc/rc.local文件，在启动项里加入启动命令。
+
+6、复制以下文本
+
+cd /d "%SystemRoot%\system32"
+slmgr /kms 你的VPS的IP或者域名
+slmgr /ato
+slmgr /xpr
+
+存成bat格式的文件，然后右键以管理员身份运行。
+
+7、验证是否激活。在cmd或powershell中执行
+
+slmgr.vbs -dlv
+
+不出意外的话，会显示已经激活成功的信息。
+
+8、这个kms激活服务器，同样可以用来激活office，原理基本一致。可以参考原作者的github pages进行激活。
