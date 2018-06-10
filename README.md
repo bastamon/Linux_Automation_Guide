@@ -116,6 +116,10 @@ wget https://repo.anaconda.com/archive/Anaconda2-5.1.0-Linux-x86_64.sh
 	sudo apt install python-pip
 	sudo apt-get install git
 	sudo apt-get install teamviewer-host
+	sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+	sudo apt-get update
+	sudo apt-get install ubuntu-make
+	sudo umake web visual-studio-code
 	#openssh-server
 		sudo apt-get install openssh-server
 		#是否启动：

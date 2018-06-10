@@ -1,10 +1,12 @@
-###1秒钟启动一个http下载服务器：
+####第二章Python的生态工具
+###2.1 Python内置小工具
+##2.1.1 启动一个http下载服务器：
 python -m SimpleHTTPServer
-或py3中
+//或py3中
 python -m http.server
 
 
-###pip高级用法
+###2.2 pip高级用法
 install
 download
 uninstall
@@ -35,6 +37,10 @@ pip install --download='pwd' -r requirements.txt
 #本地安装
 pip install --no-index -f file://'pwd' -r requirements.txt
 //如pip install --download='pwd' flask
+
+
+
+###2.3 Python编辑器
 #vim常用命令总结 
 //http://img.blog.csdn.net/20160712110935064?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center
 
@@ -44,11 +50,14 @@ pip install --no-index -f file://'pwd' -r requirements.txt
 pip install jedi
 
 
-
-##使用IPython交互式编程
+###2.4 Python编程辅助工具
+##2.4.2 使用IPython交互式编程
 sudo apt-get install ipython
+#可以使用？通配符获取帮助信息
 
-##使用jupyter
+
+
+##2.4.3 使用jupyter
 pip install jupyter
 #如果Linux没有图形界面，可以设置--no-browser和设置--ip=0.0.0.0进行外部访问，如果不指定--ip参数，默认ip是localhost(本地)
 jupyter notebook --no-browser --ip=0.0.0.0
@@ -56,11 +65,35 @@ jupyter notebook --no-browser --ip=0.0.0.0
 #jupyter Notebook各种使用方法记录·持续更新
 https://blog.csdn.net/tina_ttl/article/details/51031113
 #使用%matplotlib inline预声明画图
+%matplotlib inline
 
-##python调试器
-#标准库的pdb和开源的ipdb
 
-##2.7python工作环境的管理使用pyenv和virtualenv管理
+
+###2.5 python调试器
+#标准库的pdb和开源的ipdb,部分pdb调试命令
+break
+continue
+next
+step
+where
+enable
+disable
+pp/p
+list
+up
+down
+restart
+args
+clear
+return
+
+
+
+
+
+
+
+###2.7python工作环境的管理使用pyenv和virtualenv管理
 #pyenv管理
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv 
 //配置环境变量
@@ -89,6 +122,39 @@ exec $SHELL
 source ~/.bash_profile 
 
 
+
+####第3章 打造命令工具
+
+##3.1.1 使用sys.argv获取命令行参数
+
+from __future__ import print_function
+import os
+import sys
+
+def main():
+    sys.argv.append("")
+    print(sys.argv[0])
+    filename = sys.argv[1]
+    if not os.path.isfile(filename):
+        raise SystemExit(filename + 'dose not exists')
+    elif not os.access(filename, os.R_OK):
+        raise SystemExit(filename + 'is not accessible')
+    else:
+        print(filename + ' is accessible')        
+        
+        
+if __name__ == '__main__':
+    main()
+    
+#python 参数0 参数1 …… 参数n    
+    
+
+
+
+
+
+
+####第4章 文本处理
 
 
 
