@@ -1,4 +1,4 @@
-####第二章Python的生态工具
+﻿####第二章Python的生态工具
 ###2.1 Python内置小工具
 ##2.1.1 启动一个http下载服务器：
 python -m SimpleHTTPServer
@@ -147,6 +147,20 @@ if __name__ == '__main__':
     main()
     
 #python 参数0 参数1 …… 参数n    
+#在python2.x中 ，异常是这样的处理的，异常基类后面加一个逗号“ ，”  然后跟着异常类型
+import traceback
+try:
+  1/0
+except Exception , err:
+  print err
+
+#在python3.x中，异常是这样处理的，基类通过关键 词"as" 连接异常类型
+import traceback
+try:
+  1/0
+except Exception as err:
+  print(err)
+
     
 
 
