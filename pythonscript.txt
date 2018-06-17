@@ -199,6 +199,14 @@ passwd=getpass.getpass('your passwd:')
 print(user,passwd)
 
 
+###3.2
+
+
+
+
+
+
+
 ####第4章 文本处理
 
 
