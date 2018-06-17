@@ -148,10 +148,55 @@ if __name__ == '__main__':
     
 #python 参数0 参数1 …… 参数n    
     
+##3.1.2使用sys.stdin和fileinput读取标准输入
+
+from __future__ import print_function
+import sys
+
+for line in sys.stdin:
+    print (line,end="")
 
 
 
 
+#调用read函数读取标准输入中的所有内容调用readlines函数将标准输入的内容读取到一个列表中：
+
+from __future__ import print_function
+import sys
+
+def get_content():
+    return sys.stdin.readlines()
+
+print(get_content())
+
+
+
+
+
+
+#fileinput可以依次读取命令行参数中给出的多个文件，也就是说fileinput会遍历sys.argv[1:]列表，fileinput遍历文件内容
+
+#!/usr/bin/python
+from __future__ import print_function
+import fileinput
+for line in fileinput.input():
+    meta= [fileinput.filename(),fileinput.fileno(),fileinput.filelineno(),fileinput.isfirstline(),fileinput.isstdin()]
+    print(*meta,end="")
+    print(line,end="")
+
+##3.1.3 使用SystemExit异常打印错误信息
+
+import sys
+
+sys.stdout.write('hello') #调用 2>/dev/null
+sys.stderr.write('world') #调用 >/dev/null
+
+##3.1.4使用getpass获取密码
+from __future__ import print_function
+import getpass
+user=getpass.getuser()
+passwd=getpass.getpass('your passwd:')
+print(user,passwd)
 
 
 ####第4章 文本处理
