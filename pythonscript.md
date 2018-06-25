@@ -147,26 +147,26 @@ jupyter Notebook各种使用方法记录·持续更新![持续更新](https://bl
 
 # 第3章 打造命令工具
 ### 3.1.1 使用sys.argv获取命令行参数
-'''
-from __future__ import print_function
-import os
-import sys
 
-def main():
-    sys.argv.append("")
-   print(sys.argv[0])
-    filename = sys.argv[1]
-    if not os.path.isfile(filename):
-        raise SystemExit(filename + 'dose not exists')
-    elif not os.access(filename, os.R_OK):
-        raise SystemExit(filename + 'is not accessible')
-    else:
-        print(filename + ' is accessible')        
-        
-        
-if __name__ == '__main__':
-    main()
-'''
+        from __future__ import print_function
+        import os
+        import sys
+
+        def main():
+            sys.argv.append("")
+        print(sys.argv[0])
+            filename = sys.argv[1]
+            if not os.path.isfile(filename):
+                raise SystemExit(filename + 'dose not exists')
+            elif not os.access(filename, os.R_OK):
+                raise SystemExit(filename + 'is not accessible')
+            else:
+                print(filename + ' is accessible')        
+                
+                
+        if __name__ == '__main__':
+            main()
+
 
 可以得出
 >python 参数0 参数1 …… 参数n   
