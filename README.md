@@ -101,7 +101,7 @@ deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe
 
 ```
 
-# then terminal input to add Pycharm repository
+# Then terminal input to add Pycharm repository
 ```
 sudo add-apt-repository ppa:mystic-mirage/pycharm
 
@@ -130,14 +130,12 @@ sudo apt-get install openssh-server
 #ps -e |grep ssh
 ```
 
-
-
-#pycharm 
+# pycharm 
 ```
 sudo apt-get install pycharm-community
 ```
 
-#Anconda 推荐2.7
+# Anconda 推荐2.7
 ```
 #https://www.anaconda.com/download/#linux
 wget https://repo.anaconda.com/archive/Anaconda2-5.1.0-Linux-x86_64.sh		
@@ -147,7 +145,7 @@ wget https://launchpad.net/ubuntu-kylin-software-center/1.3/1.3.14/+download/ubu
 wget https://download.teamviewer.com/download/linux/teamviewer-host_amd64.deb
 ```
 
-#codeblocks
+# codeblocks
 ```
 sudo add-apt-repository ppa:damien-moore/codeblocks-stable  
 sudo apt-get update  
