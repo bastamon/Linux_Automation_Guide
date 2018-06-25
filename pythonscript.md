@@ -120,10 +120,10 @@ jupyter Notebook各种使用方法记录·持续更新![持续更新](https://bl
 配置环境变量:
 ```
 
->echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile  
->echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile  
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile  
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile  
 
->echo 'eval "$(pyenv init -)"' >> ~/.bash_profile  //添加pyenv初始化到你的shell
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile  //添加pyenv初始化到你的shell
 
 ```
 
