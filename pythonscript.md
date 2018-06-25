@@ -55,9 +55,9 @@ completion 使用pip命令补全
 [vim常用命令总结]( 
 http://img.blog.csdn.net/20160712110935064?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
-# 代码补全插件snipmate(已安装)
-# 语法检查插件Syntastic(已安装)
-# jedi-vim(需要安装)
+#### 代码补全插件snipmate(已安装)
+#### 语法检查插件Syntastic(已安装)
+#### jedi-vim(需要安装)
 >pip install jedi
 
 
