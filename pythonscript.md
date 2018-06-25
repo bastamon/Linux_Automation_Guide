@@ -11,19 +11,19 @@ py2.x
 
 >python -m http.server
 
-###2.2 pip高级用法
-*install
-*download
-*uninstall
-*freeze
-*list
-*show查找安装包
-*check检查安装包的依赖是否完整
-*search
-*wheel打包软件到wheel
-*hash
-*completion生成命令补全
-*help
+### 2.2 pip高级用法
+* install
+* download
+* uninstall
+* freeze
+* list
+* show查找安装包
+* check检查安装包的依赖是否完整
+* search
+* wheel打包软件到wheel
+* hash
+* completion生成命令补全
+* help
 ////
 
 # 导出系统已安装的安装包列表到requirements
