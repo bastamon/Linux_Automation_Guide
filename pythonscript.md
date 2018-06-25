@@ -1,12 +1,13 @@
-﻿####第二章Python的生态工具
-###2.1 Python内置小工具
-##2.1.1 启动一个http下载服务器：
+﻿# 第二章Python的生态工具
+
+## 2.1 Python内置小工具
+
+### 2.1.1 启动一个http下载服务器：
+
 py2.x
 >python -m SimpleHTTPServer
 
-
 //或py3.x中
-
 
 >python -m http.server
 
