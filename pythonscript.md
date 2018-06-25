@@ -24,7 +24,7 @@ py2.x
 * hash
 * completion生成命令补全
 * help
-////
+
 
 freeze导出系统已安装的安装包列表到requirements
 >pip freeze > requirements.txt
