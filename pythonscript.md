@@ -28,8 +28,10 @@ py2.x
 
 freeze导出系统已安装的安装包列表到requirements
 >pip freeze > requirements.txt
+
 install从requirements文件安装
 >pip install -r requirements.txt
+
 completion 使用pip命令补全
 >pip completion --bash >>~/.profile
 
