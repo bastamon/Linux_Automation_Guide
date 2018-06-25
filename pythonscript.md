@@ -11,36 +11,36 @@ py2.x
 
 >python -m http.server
 
-
 ###2.2 pip高级用法
-install
-download
-uninstall
-freeze
-list
-show查找安装包
-check检查安装包的依赖是否完整
-search
-wheel打包软件到wheel
-hash
-completion生成命令补全
-help
+*install
+*download
+*uninstall
+*freeze
+*list
+*show查找安装包
+*check检查安装包的依赖是否完整
+*search
+*wheel打包软件到wheel
+*hash
+*completion生成命令补全
+*help
 ////
-#导出系统已安装的安装包列表到requirements
-pip freeze > requirements.txt
-#从requirements文件安装
-pip install -r requirements.txt
-#使用pip命令补全
-pip completion --bash >>~/.profile
 
-##改变pip镜像源
-#创建~/.pip/pip.conf
+# 导出系统已安装的安装包列表到requirements
+>pip freeze > requirements.txt
+# 从requirements文件安装
+>pip install -r requirements.txt
+# 使用pip命令补全
+>pip completion --bash >>~/.profile
+
+## 改变pip镜像源
+# 创建~/.pip/pip.conf
 cat pip.conf
 [global]
 index-url=https://pypi.douban.com/simple
-#下载到本地
+# 下载到本地
 pip install --download='pwd' -r requirements.txt
-#本地安装
+# 本地安装
 pip install --no-index -f file://'pwd' -r requirements.txt
 //如pip install --download='pwd' flask
 
