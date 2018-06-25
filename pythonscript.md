@@ -282,6 +282,7 @@ python test_system_exit.py
 ```
 from __future__ import print_function
 import getpass
+
 user=getpass.getuser()
 passwd=getpass.getpass('your passwd:')
 print(user,passwd)
