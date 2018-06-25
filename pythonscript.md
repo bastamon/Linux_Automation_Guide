@@ -4,10 +4,10 @@
 
 ### 2.1.1 启动一个http下载服务器：
 
-py2.x
+        py2.x
 >python -m SimpleHTTPServer
 
-//或py3.x中
+        或py3.x中
 
 >python -m http.server
 
@@ -26,28 +26,29 @@ py2.x
 * help
 
 
-freeze导出系统已安装的安装包列表到requirements
+        freeze导出系统已安装的安装包列表到requirements
 >pip freeze > requirements.txt
 
-install从requirements文件安装
+        install从requirements文件安装
 >pip install -r requirements.txt
 
-completion 使用pip命令补全
+        completion 使用pip命令补全
 >pip completion --bash >>~/.profile
 
 #### 改变pip镜像源
 
-创建~/.pip/pip.conf
+        创建~/.pip/pip.conf
 >cat pip.conf
 >[global]
 >index-url=https://pypi.douban.com/simple
 
-下载到本地
+        下载到本地
 >pip install --download='pwd' -r requirements.txt
 
-本地安装
+        本地安装
 >pip install --no-index -f file://'pwd' -r requirements.txt
-//如pip install --download='pwd' flask
+        如：
+>pip install --download='pwd' flask
 
 
 
@@ -62,21 +63,23 @@ http://img.blog.csdn.net/20160712110935064?watermark/2/text/aHR0cDovL2Jsb2cuY3Nk
 
 
 ### 2.4 Python编程辅助工具
-## 2.4.2 使用IPython交互式编程
-sudo apt-get install ipython
-# 可以使用？通配符获取帮助信息
+#### 2.4.2 使用IPython交互式编程
+>sudo apt-get install ipython
+
+        可以使用？通配符获取帮助信息
 
 
 
-##2.4.3 使用jupyter
-pip install jupyter
-#如果Linux没有图形界面，可以设置--no-browser和设置--ip=0.0.0.0进行外部访问，如果不指定--ip参数，默认ip是localhost(本地)
-jupyter notebook --no-browser --ip=0.0.0.0
-#在外部机器中替换0.0.0.0为Linux服务器ip即可
-#jupyter Notebook各种使用方法记录·持续更新
-https://blog.csdn.net/tina_ttl/article/details/51031113
-#使用%matplotlib inline预声明画图
-%matplotlib inline
+#### 2.4.3 使用jupyter
+>pip install jupyter
+
+        如果Linux没有图形界面，可以设置--no-browser和设置--ip=0.0.0.0进行外部访问，如果不指定--ip参数，默认ip是localhost(本地)
+>jupyter notebook --no-browser --ip=0.0.0.0
+
+        在外部机器中替换0.0.0.0为Linux服务器ip即可
+        jupyter Notebook各种使用方法记录·[持续更新](https://blog.csdn.net/tina_ttl/article/details/51031113)
+        使用%matplotlib inline预声明画图
+>%matplotlib inline
 
 
 
