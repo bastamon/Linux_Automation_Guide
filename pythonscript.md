@@ -35,33 +35,36 @@ install从requirements文件安装
 completion 使用pip命令补全
 >pip completion --bash >>~/.profile
 
-## 改变pip镜像源
-# 创建~/.pip/pip.conf
-cat pip.conf
-[global]
-index-url=https://pypi.douban.com/simple
-# 下载到本地
-pip install --download='pwd' -r requirements.txt
-# 本地安装
-pip install --no-index -f file://'pwd' -r requirements.txt
+#### 改变pip镜像源
+
+创建~/.pip/pip.conf
+>cat pip.conf
+>[global]
+>index-url=https://pypi.douban.com/simple
+
+下载到本地
+>pip install --download='pwd' -r requirements.txt
+
+本地安装
+>pip install --no-index -f file://'pwd' -r requirements.txt
 //如pip install --download='pwd' flask
 
 
 
-###2.3 Python编辑器
-#vim常用命令总结 
-//http://img.blog.csdn.net/20160712110935064?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center
+### 2.3 Python编辑器
+[vim常用命令总结]( 
+http://img.blog.csdn.net/20160712110935064?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
-#代码补全插件snipmate
-#语法检查插件Syntastic
-#jedi-vim(需要安装)
-pip install jedi
+# 代码补全插件snipmate(已安装)
+# 语法检查插件Syntastic(已安装)
+# jedi-vim(需要安装)
+>pip install jedi
 
 
-###2.4 Python编程辅助工具
-##2.4.2 使用IPython交互式编程
+### 2.4 Python编程辅助工具
+## 2.4.2 使用IPython交互式编程
 sudo apt-get install ipython
-#可以使用？通配符获取帮助信息
+# 可以使用？通配符获取帮助信息
 
 
 
