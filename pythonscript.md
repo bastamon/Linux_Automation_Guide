@@ -26,11 +26,11 @@ py2.x
 * help
 ////
 
-# 导出系统已安装的安装包列表到requirements
+freeze导出系统已安装的安装包列表到requirements
 >pip freeze > requirements.txt
-# 从requirements文件安装
+install从requirements文件安装
 >pip install -r requirements.txt
-# 使用pip命令补全
+completion 使用pip命令补全
 >pip completion --bash >>~/.profile
 
 ## 改变pip镜像源
