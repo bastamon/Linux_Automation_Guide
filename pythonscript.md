@@ -313,9 +313,9 @@ passwd=getpass.getpass('your passwd:')
 print(user,passwd)
 ```
 
-## 3.2 使用ConfigParse解析<font color=#FF1493>配置文件</font>☆☆☆(dependancy python 2.7~2.8)
+## 3.2 使用ConfigParse解析配置文件☆☆☆(dependancy python 2.7~2.8)
 
-假设已安装MySql，那就有/etc/mysql/my.cnf,pip的配置文件位于~/.pip/pip.conf中。还有*.ini等配置文件
+假设已安装MySql，那就有/etc/mysql/my.cnf,pip的配置文件位于~/.pip/pip.conf中。还有*.ini等<font color=#FF1493>配置文件</font>
 
 ConfigParse中判断配置项相关的方法有：
 * sections:返回一个包含所有章节的列表
@@ -389,7 +389,12 @@ cf.write(open('my_copy.cnf','w'))
 
 ## 3.3使用argparse解析命令行参数
 
-
+argparse是标准库中用来解析命令行参数的模块；argparse能根据程序中的定义从<font color=#FF1493>sys.argv</font>中解析出这些参数，并自动生成帮助和使用信息
+```
+# 使用argparse解析命令行参数前，必须先创建一个解析器
+import argparse
+parser = argparse.ArgumentParser() 
+```
 
 
 
