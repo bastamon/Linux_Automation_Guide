@@ -205,8 +205,8 @@ if __name__ == '__main__':
 
 
 可以得出语法:
-
 ```python 参数0(sys.argv[0]) 参数1(sys.argv[1]) …… 参数n(sys.argv[n]) ```  
+
 ---------------
 补充：
 
