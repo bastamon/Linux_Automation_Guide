@@ -313,7 +313,7 @@ passwd=getpass.getpass('your passwd:')
 print(user,passwd)
 ```
 
-## 3.2 使用ConfigParse解析<font color=#FF1439>配置文件</font>☆☆☆(dependancy python 2.7~2.8)
+## 3.2 使用ConfigParse解析<font color=#FF1493>配置文件</font>☆☆☆(dependancy python 2.7~2.8)
 
 假设已安装MySql，那就有/etc/mysql/my.cnf,pip的配置文件位于~/.pip/pip.conf中。还有*.ini等配置文件
 
