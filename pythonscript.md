@@ -1,5 +1,27 @@
 ﻿《python linux系统管理与自动化运维》
 ![cover]()
+
+# 准备阶段
+* [Anaconda下载]https://www.anaconda.com/download/
+```wget https://repo.anaconda.com/archive/Anaconda2-5.2.0-Linux-x86_64.sh```
+```$ sudo sh ./Anaconda2-5.2.0-Linux-x86_64.sh```
+* 安装anaconda-navigator方便管理
+```$conda install -c anaconda anaconda-navigator```
+* 启动anaconda-navigator
+```$anaconda-navigator```
+* 切换conda环境
+```
+$activate root #☆☆
+$conda info --envs ☆
+$conda create --name python27 
+$activate python27
+$python --version
+$conda info --envs
+$deactivate python27    #等价$activate root
+$conda remove --name python27 --all #移除
+```
+
+
 ---------------------------------------------
 # 第二章Python的生态工具
 
@@ -154,7 +176,9 @@ $ source ~/.bash_profile
 $ exec $SHELL
 $ source ~/.bash_profile
 ```
+--------------------
 
+以上2.7节内容因为有Anaconda Navigator 更好替换之
 
 # 第3章 打造命令工具
 ### 3.1.1 使用sys.argv获取命令行参数
@@ -289,7 +313,7 @@ passwd=getpass.getpass('your passwd:')
 print(user,passwd)
 ```
 
-## 3.2使用ConfigParse解析配置文件
+## 3.2 使用ConfigParse解析<font color=#A52A2A>配置文件</font>☆☆☆(dependancy python 2.77~2.8)
 
 假设已安装MySql，那就有/etc/mysql/my.cnf,pip的配置文件位于~/.pip/pip.conf中。还有*.ini等配置文件
 
@@ -305,19 +329,19 @@ import ConfigParser
 
 cf = ConfigParser.ConfigParser(allow_no_value = True)
 cf.read('my.cnf')   //创建mysql的副本路径
-//['my.cnf']
+## ['my.cnf']
 cf.sections()
-//['client','mysqld']
+## ['client','mysqld']
 cf.has_section('client')
-//True
+## True
 cf.options('client')
-//['port','user','password','host']
+## ['port','user','password','host']
 cf.has_option('client','user')
-//True
+## True
 cf.get('client','host')
-//'127.0.0.1'
+## '127.0.0.1'
 cf.getint('client','port')
-//3306
+## 3306
 ```
 
 ConfigParse中修改配置项相关的方法有：
@@ -327,8 +351,39 @@ ConfigParse中修改配置项相关的方法有：
 * set:添加一个选项
 * write：将ConfigParse对象中的数据保存到文件中
 ```
+# -*- coding: utf-8 -*-
+import os
+import ConfigParser
 
 
+cf = ConfigParser.ConfigParser(allow_no_value = True)
+cf.read('my.cnf')   ## 读取mysql的副本路径缓存进cf
+## ['my.cnf']
+cf.sections()
+## ['client','mysqld']
+cf.has_section('client')
+## True
+cf.options('client')
+## ['port','user','password','host']
+cf.has_option('client','user')
+## True
+cf.get('client','host')
+## '127.0.0.1'
+cf.getint('client','port')
+## 3306
+
+os.system("pause")
+print("write")
+cf.remove_section('client')
+## 
+cf.add_section('mysql')
+## 增加mysql章节
+cf.set('mysql','host','127.0.0.1')
+## 在mysql章节下增加hos t = 127.0.0.1
+cf.set('mysql','port','3306')
+## 在mysql章节下增加port = 3306
+cf.write(open('my_copy.cnf','w'))
+## 将cf写到my_copy.cnf副本
 ```
 
 
@@ -339,9 +394,13 @@ ConfigParse中修改配置项相关的方法有：
 
 
 
-# 第4章 文本处理
+# 第4章 文本处理☆☆☆☆
 
 
 
+# 第5章 
+
+# 第6章
 
 
+# 第7章 文档与报告☆☆☆☆
