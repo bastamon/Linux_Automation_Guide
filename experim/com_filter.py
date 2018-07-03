@@ -34,7 +34,7 @@ def comfilter(la):
                 # print(line_num)
                 cmp_book[num] = cmp_book[num] + "\n" + arr_line[line_num]
             # print(cmp_book[num])
-            cmp_book[num] = "#\n" + cmp_book[num]
+            cmp_book[num] = cmp_book[num] + "\n#"
         # print(cmp_book)
         for num, page in enumerate(cmp_book):
             # for line in page.split("\n"):
