@@ -394,13 +394,58 @@ cf.write(open('my_copy.cnf','w'))
 ## 3.3使用argparse解析命令行参数
 
 argparse是标准库中用来解析命令行参数的模块；argparse能根据程序中的定义从<font color=#FF1493>sys.argv</font>中解析出这些参数，并自动生成帮助和使用信息
+
+### 3.3.1 ArgumentParse解析器
 ```
 # 使用argparse解析命令行参数前，必须先创建一个解析器
 import argparse
 parser = argparse.ArgumentParser() 
 ```
+ArgumentParser类的初始化函数有多个参数，其中比较常用的是description,用以程序描述信息。
+
+为应用程序添加参数选项需要用ArgumentParser对象的add_argument方法
+
+```add_argument(name or flags...[,action][,nargs][,const][,default][,type][,choices][,required][,help][,metavar][,dest])```
+
+* name/flags:参数的名字
+* action:遇到参数时的动作
+* nargs:参数的个数,可以是巨头的数字,或者是“+”号与“*”号。其中,“*”号表示0或多个参数,“+”表示1或多个参数
+* const action和nargs:
+* default:
+* type:参数的类型
+* choices:参数允许的值
+* required:可选参数是否可以省略
+* help:参数的帮助信息
+* metavar:在usage说明中的参数名称
+* dest:解析后的参数名称
+
+解析参数用ArgumentParser对象的parse_args方法，该方法返回一个Namespace对象。获取对象后，参数值通过属性的方式进行访问
 
 
+```
+from __future__ import print_function
+import argparse
+
+
+def _argparse():
+    parser = argparse.ArgumentParser(description="This is description")  #创建ArgumentParser解析器
+    #以add_argument函数添加选项，通过parser.server 获取 --host选项的值
+    parser.add_argument('--host', action = 'store', dest = 'server', default = "localhost", help= 'connect to host')
+    # 通过parse.boolean_switch 获取-t选项的值
+    parser.add_argument('-t',action ='store_true', default = False, dest = 'boolean_switch', help = 'Set a switch to true')
+    return parser.parse_args()
+
+
+def main():
+    parser= _argparse()
+    print(parser)
+    print('host = ', parser.server)
+    print('boolean_switch=', parser.boolean_switch)
+
+
+if __name__ =='__main__':
+    main()
+```
 
 
 # 第4章 文本处理☆☆☆☆
