@@ -476,9 +476,48 @@ if __name__=='__main__':
 
 ## 3.4使用logging记录日志
 ```import logging```
-## 3.4.1
 
+### 3.4.1 日志的作用
+>诊断:记录与应用程序操作相关的日志
 
+>审计:为商业分析而记录的日志
+
+### 3.4.2 python 中的logging模块
+#### 表3-1 logging 模块日志级别
+<table>
+    <tr>
+        <th width=15%, bgcolor=yellow >日志级别</th>
+        <th width=15%, bgcolor=yellow>权重</th>
+        <th width=50%, bgcolor=yellow>含义</th>
+    </tr>
+    <tr>
+        <td>CRITICAL</td>    
+        <td>50</td>
+        <td>严重错误，软件不能继续运行。</td>
+    </tr>
+    <tr>
+        <td>ERROR</td>
+        <td>40</td>
+        <td>发生严重错误，需要马上处理</td>
+    </tr>
+    <tr>
+        <td>WARNING</td>
+        <td>30</td>
+        <td>应用程序可以容忍这些信息,但是此时应用程序还是正常运行的，不过它应该被检查及修复，否则将在不久的将来发生问题</td>
+    </tr>
+    <tr>
+        <td>INFO</td>
+        <td>20</td>
+        <td>证明事情按预期工作，突出强调应用程序的运行过程</td>
+    </tr>
+    <tr>
+        <td>DEBUG</td>
+        <td>10</td>
+        <td>详细信息，只有开发人员调试程序时才需要关注的事情</td>
+    </tr>
+</table>
+
+### 3.4.3配置日至格式 
 
 
 
