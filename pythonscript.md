@@ -408,7 +408,7 @@ ArgumentParser类的初始化函数有多个参数，其中比较常用的是des
 ```add_argument(name or flags...[,action][,nargs][,const][,default][,type][,choices][,required][,help][,metavar][,dest])```
 
 * name/flags:参数的名字
-* action:遇到参数时的动作
+* action:遇到参数时的动作{store,store_const,store_ture/store_false,append,append_const,version }
 * nargs:参数的个数,可以是巨头的数字,或者是“+”号与“*”号。其中,“*”号表示0或多个参数,“+”表示1或多个参数
 * const action和nargs:
 * default:
@@ -446,6 +446,40 @@ def main():
 if __name__ =='__main__':
     main()
 ```
+### 3.3.2模仿MySQL客户端的命令参数
+
+```
+from __future__ import print_function
+import argparse
+
+
+def _argparse():
+    parser = argparse.ArgumentParser(description='A python-mysql client')
+    parser.add_argument('--host',action='store',dest='host',required=True,help='connect to host')   #parser.host
+    parser.add_argument('-u','--user',action='store',dest='user',required=True,help='user for login')   #parser.user
+    parser.add_argument('-p','--password',action='store',dest='password',required=True,help='passwoed to use when connecting to server')    #parser.password
+    parser.add_argument('-P','--Port',action='store',dest='port',default=3306,type=int,required=True,help='port number to use for connection or 3306 for default')    #parser.port
+    parser.add_argument('-v','--version',action='version',version='%(prog)s 0.1')#parser.version
+    return parser.parse_args()#返回add_argument参数的dest中解析出来的值
+
+
+def main():
+    parser = _argparse()
+    conn_args = dict(host=parser.host,user=parser.user,password=parser.password,port=parser.port)
+    print(conn_args)
+
+
+if __name__=='__main__':
+    main()
+```
+>关联3.5节click、prompt_toolkit
+
+## 3.4使用logging记录日志
+```import logging```
+## 3.4.1
+
+
+
 
 
 # 第4章 文本处理☆☆☆☆
