@@ -483,7 +483,7 @@ if __name__=='__main__':
 >审计:为商业分析而记录的日志
 
 ### 3.4.2 python 中的logging模块
-#### 表3-1 logging 模块日志级别
+<centre>表3-1 logging 模块日志级别</centre>
 <table>
     <tr>
         <th width=15%, bgcolor=yellow >日志级别</th>
