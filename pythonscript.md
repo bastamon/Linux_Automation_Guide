@@ -519,7 +519,68 @@ if __name__=='__main__':
 
 ### 3.4.3配置日至格式 
 
+在使用日至之前，一些简单的配置
+```
+#!/usr/local/bin/python
+# -*- coding:utf-8 -*-
+import logging
 
+logging.basicConfig(filename='app.log',level=logging.INFO)
+
+logging.debug('debug message')
+logging.info('info message')
+logging.warn('warn message')
+logging.error('error message')
+logging.critical('critical message')
+```
+上述程序会在当前目录产生一个app.log文件。该文件中存在INFO及INFO以上级别的日志记录。
+它通过basicConfig方法对日志进行了简单的配置，也可以进行更加复杂的日至配置;logging模块中的几个概念，
+> Logger:日志记录器,是应用程序中能直接使用的接口
+> Handler:日至处理器,用以表明将日志保存到什么地方以及保存多久
+> Fornatter:格式化,，用以配置日志的输出格式
+
+一个日志处理器使用一个日志处理器，一个日志处理器使用一个日志格式化。
+
+```
+#!/usr/local/bin/python
+#-*- coding:utf-8 -*-
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s:%(levelname)s:%(message)s',
+    filename="app.log"
+)
+logging.debug('debug message')
+logging.info('info message')
+logging.warn('warn message')
+logging.error('error message')
+logging.critical('critical message')
+```
+
+一个典型的日志配置文件:
+```
+[loggers]
+keys=root//一个名为root的logger
+
+[handlers]
+keys=logfile//一个名为logfile的handler
+
+[formatters]
+keys=generic//一个名为generic的formatter
+
+[logger_root]
+handlers=logfile
+
+[handler_logfile]
+class=handlers.TimedRotatingFileHandler
+args=('app.log','midnight',1,10)
+level=DEBUG
+formatter=generic
+
+[formatter_generic]
+format=%(asctime)s%(levelname)-5.5s [%(name)s:%(lineno)s]%(message)s
+```
 
 # 第4章 文本处理☆☆☆☆
 
