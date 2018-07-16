@@ -584,9 +584,82 @@ format=%(asctime)s%(levelname)-5.5s [%(name)s:%(lineno)s]%(message)s
 
 # 第4章 文本处理☆☆☆☆
 
+# 4.1 字符串常量
+# 4.1.1 定义字符串
+python 不需要区分字符和字符串
+
+遇到以下情况：
+```
+intro = "He's a teacher" 
+statement= 'John said to me:"Can you do me a favour tonight"'
+```
+
+可以使用转义字符时
+
+```
+intro = 'He\'s a teacher'
+statement = "John said to me:\"Can you do me a favour tonight\"" 
+```
+
+在python中，可以使用山歌硬好来定义字符串，如：
+```
+message = '''Type "copyright", "credits" or "license" for more information. Details about 'object',use 'object??' for extra details.''' 
+```
+
+
+# 4.1.2 字符串是不可变的有序集合
+```
+s = "hello"
+s[0] = 'H'
+```
+会引起Traceback, TypeError,
+>由于Python字符串不可变的特性，对字符串进行操作会得到一个新的字符串:
+
+# 4.1.3 字符串函数
+* 1.通用操作
+```
+s = "Hello, world"
+"Hello" in s
+```
+* 2.与大小写相关的方法
+```
+upper#转换
+lower#
+isupper#判断
+islower#
+swapcase#将所有大写换小写，所有小写换大写
+capitalize#大写首字母
+istitle#判断字符串是不是标题
+```
+* 3.判断类方法
+```
+isalpha#非空且全字母
+isalnum#非空且包含数字和字母
+isspace#非空且包含空格、制表符、换行符
+isdecimal#只包含数字字符
+```
+* 4.字符串方法startswith和endswith
+```
+s="lai ming xing"
+s.startswith('lai')#True
+s.startswith('lai m')#True
+s.startswith('Not')#False
+s.endswith('xing')#True
+```
+* 5.查找类函数
+```
+find#查找子串出现在字符串中的位置,失败则返回-1
+index#同find,失败则返回ValueError
+rfind#从后向前
+rindex#从后向前
+```
+
+
+
 
 
 # 第5章 
+
 
 # 第6章
 
