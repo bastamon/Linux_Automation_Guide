@@ -613,7 +613,7 @@ s = "hello"
 s[0] = 'H'
 ```
 会引起Traceback, TypeError,
->由于Python字符串不可变的特性，对字符串进行操作会得到一个新的字符串:
+>由于Python字符串不可变的特性，对字符串进行操作只会得到一个新的字符串:
 
 # 4.1.3 字符串函数
 * 1.通用操作
@@ -653,10 +653,22 @@ index#同find,失败则返回ValueError
 rfind#从后向前
 rindex#从后向前
 ```
+* 6.字符串操作方式
+字符串的join函数用以连接字符串列表，组成一个新的、更大的字符串。若仅仅需要将几个字符串连接起来，并且无需插入任何额外的字符，则可以使用空字符串调用join方法
+
+```
+print("".join(['a','b','c']))   #'abc'
+print(",".join(['a','b','c']))   #'a,b,c'
+print("###".join(['a','b','c']))   #'a###b###c'
+
+```
+>split()正好是和join()相反的作用
 
 
-
-
+>python可以用collections.Counter保存资源热度Counter。Counter是dict的子类，比字典更加好用
+```
+c=Counter('abcba')  #{'a':2,'b':2,'c':1}关键字热度计数器
+```
 
 # 第5章 
 
