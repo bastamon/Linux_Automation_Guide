@@ -176,6 +176,8 @@ sudo apt-get install wx3.0-i18n
 	
 	
 	
-```windows visual studio add-in installer 必装>https://www.microsoft.com/web/downloads/platform.aspx```		
+```windows visual studio add-in installer 必装>https://www.microsoft.com/web/downloads/platform.aspx```	
+
+16
 
 
