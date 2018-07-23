@@ -667,7 +667,7 @@ print("###".join(['a','b','c']))   #'a###b###c'
 
 >python可以用collections.Counter保存资源热度Counter。Counter是dict的子类，比字典更加好用
 ```
-c=Counter('abcba')  #{'a':2,'b':2,'c':1}关键字热度计数器
+c=Counter('abcba')  #{'a':2,'b':2,'c':1}可用于关键字热度计数器
 ```
 
 # 第5章 
