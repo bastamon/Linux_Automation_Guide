@@ -62,7 +62,7 @@ def comfilter(la):
                 ex_book.append(exstr)
 
             except IndexError as err:
-                print(cmp_book)
+                print(cmp_book+str(err))
                 pass
             # exstr = "".join(re.findall('# CMP [0-9]{1,4}',page))+"\t"+str(re.findall('[1-9]{1,4}',str(re.findall('ID=[1-9]{1,4}',page)))[0])
             #
