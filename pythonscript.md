@@ -20,7 +20,14 @@ $conda info --envs
 $deactivate python27    #等价$activate root
 $conda remove --name python27 --all #移除
 ```
-
+> python提供了查询的接口在代码中可以直接打印出来看, 可以帮助查询官方模块的功能的路径。
+```第一个：__file__
+例如查看模块pyodbc的函数
+import pyodbc
+print(pyodbc.__file__)
+第二个：help()不建议使用
+help(pyodbc)
+```
 
 ---------------------------------------------
 # 第二章Python的生态工具
