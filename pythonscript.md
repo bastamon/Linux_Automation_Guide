@@ -25,7 +25,9 @@ $conda remove --name python27 --all #移除
 例如查看模块pyodbc的函数
 import pyodbc
 print(pyodbc.__file__)
-第二个：help()不建议使用
+第二个：dir(pyodbc)
+
+第三个：help()不建议使用
 help(pyodbc)
 ```
 
