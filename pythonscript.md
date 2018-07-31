@@ -593,8 +593,8 @@ format=%(asctime)s%(levelname)-5.5s [%(name)s:%(lineno)s]%(message)s
 
 # 第4章 文本处理☆☆☆☆
 
-# 4.1 字符串常量
-# 4.1.1 定义字符串
+## 4.1 字符串常量
+### 4.1.1 定义字符串
 python 不需要区分字符和字符串
 
 遇到以下情况：
@@ -616,7 +616,7 @@ message = '''Type "copyright", "credits" or "license" for more information. Deta
 ```
 
 
-# 4.1.2 字符串是不可变的有序集合
+### 4.1.2 字符串是不可变的有序集合
 ```
 s = "hello"
 s[0] = 'H'
@@ -624,7 +624,7 @@ s[0] = 'H'
 会引起Traceback, TypeError,
 >由于Python字符串不可变的特性，对字符串进行操作只会得到一个新的字符串:
 
-# 4.1.3 字符串函数
+### 4.1.3 字符串函数
 * 1.通用操作
 ```
 s = "Hello, world"
@@ -662,6 +662,13 @@ index#同find,失败则返回ValueError
 rfind#从后向前
 rindex#从后向前
 ```
+```
+s = "Return the lowest index in S where substring sub is found"
+s.find('in') # 18
+s.find('in',19) # 24,从下标19开始找
+'in' in s # True
+```
+
 * 6.字符串操作方式
 字符串的join函数用以连接字符串列表，组成一个新的、更大的字符串。若仅仅需要将几个字符串连接起来，并且无需插入任何额外的字符，则可以使用空字符串调用join方法
 
@@ -675,9 +682,56 @@ print("###".join(['a','b','c']))   #'a###b###c'
 
 
 >python可以用collections.Counter保存资源热度Counter。Counter是dict的子类，比字典更加好用
+### 4.1.4案例:使用Python分析Apache的访问日志
 ```
 c=Counter('abcba')  #{'a':2,'b':2,'c':1}可用于关键字热度计数器
 ```
+### 4.1.5字符串格式化
+>在Python中有两种格式字符串的方法：%表达式和format函数，python官方手册给出的format形式化定义
+```
+format_spec 　　::=  　　[[fill]align][sign][#][0][width][,][.precision][type]
+fill        　　　　　::=  　　<any character>
+align       　　　　::=  　　"<" | ">" | "=" | "^"
+sign       　　　　 ::=  　　"+" | "-" | " "
+width      　　　　 ::= 　　 integer
+precision   　　　　::= 　　 integer
+type        　　　　::=  　　"b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
+```
+* fill: 表示显示时需要填充的字符，默认空白字符
+* align: 表示输出结果的对齐方式,"^"表示居中
+* sign: 仅对数字起作用,表示在显示数字时，是否需要显示"+"和"-"号.默认取值"-",表示在显示正数时,不会显示"+"号,在显示负数时,显示"-"号.当sign为一个空格时(" "),表示"-"和数字之间需要保留一个空格
+* width: 表示显示的宽度
+* precision: 表示显示的精度
+* type: 表示显示的类型
+```
+"{0} is better than {1}. {2} is better than {3}.".format('Beautiful','ugly','Explicit','implicit')
+#在参数多的时候用解释性强的字典dict来做
+d = dict(good1='Beautiful', bad1='ugly',good2='Explicit',bad2='implicit')
+"{good1} is better than {bad1}. {good2} is better than {bad2}.".format('Beautiful','ugly','Explicit','implicit')
+```
+> format也可以直接访问对象的属性
+```
+from collections import namedtuple
+Person=namedtuple('student','name,age,sex')
+xm=Person(name='sunYang',age=20,sex='male')
+print("{p.name} is {p.age} old this year ".format(p=xm))
+```
+> 以下分别是对format函数的精度、符号、宽度、对齐方式、字符填充、都好等格式进行测试
+```
+print("{:.2f}".format(3.1415926))
+print("{:+.2f}".format(3.1415926))
+print("{:10.2f}".format(3.1415926))
+print("{:10.2f}".format(3.1415926))
+print("{:_^10.2f}".format(3.1415926))
+print("{:,}".format(1234567))
+print("{:_^+20,.2f}".format(1234.5678))
+```
+## 4.2正则表达式
+<centre>表4-2 正则表达式基本语法</centre>
+
+
+
+
 
 # 第5章 
 
