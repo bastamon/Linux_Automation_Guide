@@ -726,7 +726,7 @@ print("{:_^10.2f}".format(3.1415926))
 print("{:,}".format(1234567))
 print("{:_^+20,.2f}".format(1234.5678))
 ```
-## 4.2正则表达式
+## 4.2 正则表达式
 <centre>表4-2 正则表达式基本语法</centre>
 <table>
     <tr>
@@ -796,20 +796,65 @@ print("{:_^+20,.2f}".format(1234.5678))
     </tr>
 </table>
 
+### 4.2.2 利用re库处理正则表达式
+最常用的是re模块下的findall函数，用来输出所有符合模式匹配的子串。
+
+编译的正则表达式(运行更快)如下:
+```
+import re
+data = "What is the difference between python 2.7.13 and Python 3.6.0 ?"
+re_obj = re.compile('python [0-9]\.[0-9]\.[0-9]',flags=re.IGNORECASE)
+print(re_obj.findall(data))
+```
+非编译的正则表达式(短)
+```
+import re
+data = "What is the difference between python 2.7.13 and Python 3.6.0 ?"
+print(re.findall('python [0-9]\.[0-9]\.[0-9]',data,flags=re.IGNORECASE))
+```
+### 4.2.3 常用的re方法
+> 1"匹配"类的函数
+* match类似于字符串的startswith函数
+> 2"修改类"函数
+* sub类似于字符串的replace函数
+* split功能与字符串的split函数一样
+> 3大小写不敏感
+* flags=re.IGNORECASE
+> 4非贪婪匹配
+* 正则表达式默认情况下是贪婪的
+```
+text = "Beautiful is better than ugly. Explicit is better than implicit."
+print(re.findall('Beautiful.*\.',text))
+print(re.findall('Beautiful.*？\.',text)) # 只需在匹配字符串时加上一个"?" 
+```
+
+## 4.4 Jinja2模板
+
+
+# 第5章 Linux系统管理
+## 5.1 文件读写
+
+
+## 5.2 文件与文件路径管理
 
 
 
 
-# 第5章 
+
+### 5.2.1 使用os.path进行路径和文件管理
+-----------
+基础补充：os,os.path模块关于文件，目录常用的方法[链接](https://www.cnblogs.com/marianyad/p/6613753.html)
+```os.getcwd()#返回当前进程路径的字符串```
+```os.path.chdir(file)#改变到目标目录
+os.path.abspath(file)#返回路径的字符串```
+
+
+
 
 
 # 第6章
 
 
 # 第7章 文档与报告☆☆☆☆
------------
-基础补充：os,os.path模块关于文件，目录常用的方法[链接](https://www.cnblogs.com/marianyad/p/6613753.html)
-```os.getcwd()#返回当前进程路径的字符串```
-```os.path.chdir(file)#改变到目标目录
-os.path.abspath(file)#返回路径的字符串```
+
 
