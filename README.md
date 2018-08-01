@@ -22,21 +22,38 @@ ubuntuguide
 
 
 ```
-#sjtu(上海交通大学更新服务器)
-deb http://ftp.sjtu.edu.cn/ubuntu/ lucid main multiverse restricted universe
-deb http://ftp.sjtu.edu.cn/ubuntu/ lucid-backports main multiverse restricted universe
-deb http://ftp.sjtu.edu.cn/ubuntu/ lucid-proposed main multiverse restricted universe
-deb http://ftp.sjtu.edu.cn/ubuntu/ lucid-security main multiverse restricted universe
-deb http://ftp.sjtu.edu.cn/ubuntu/ lucid-updates main multiverse restricted universe
-deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid main multiverse restricted universe
-deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-backports main multiverse restricted universe
-deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-proposed main multiverse restricted universe
-deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-security main multiverse restricted universe
-deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-updates main multiverse restricted universe  
+# 中科大
+# 默认注释了源码仓库，如有需要可自行取消注释
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# 预发布软件源，不建议启用
+# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 
 
 
-# tongji
+# sjtu(上海交通大学更新服务器)
+deb http://ftp.sjtu.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb http://ftp.sjtu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://ftp.sjtu.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb http://ftp.sjtu.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src http://ftp.sjtu.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src http://ftp.sjtu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src http://ftp.sjtu.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src http://ftp.sjtu.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# 预发布软件源，不建议启用
+# deb http://ftp.sjtu.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src http://ftp.sjtu.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
+
+
+# Tongji
 deb https://mirrors.tongji.edu.cn/ubuntu/ xenial main restricted universe multiverse
 # deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
@@ -45,7 +62,6 @@ deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-backports main restricted unive
 # deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
 deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 # deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-
 # 预发布软件源，不建议启用
 # deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 # deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
@@ -53,71 +69,75 @@ deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-security main restricted univer
 
 
 # Northeastern University
-deb-src http://mirror.neu.edu.cn/ubuntu/ xenial main restricted #Added by software-properties
+# deb-src http://mirror.neu.edu.cn/ubuntu/ xenial main restricted #Added by software-properties
 deb http://mirror.neu.edu.cn/ubuntu/ xenial main restricted
-deb-src http://mirror.neu.edu.cn/ubuntu/ xenial restricted multiverse universe #Added by software-properties
+# deb-src http://mirror.neu.edu.cn/ubuntu/ xenial restricted multiverse universe #Added by software-properties
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted
-deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+# deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
 deb http://mirror.neu.edu.cn/ubuntu/ xenial universe
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates universe
 deb http://mirror.neu.edu.cn/ubuntu/ xenial multiverse
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates multiverse
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+# deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
 deb http://archive.canonical.com/ubuntu xenial partner
-deb-src http://archive.canonical.com/ubuntu xenial partner
+# deb-src http://archive.canonical.com/ubuntu xenial partner
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted
-deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+# deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security universe
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse
 
 
+
 # Tsinghua University
 # deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
 
 
 # Aliyun
 # deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
-deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
+# deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
+# deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+# deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial universe
 deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
 deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
 deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
 deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+# deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
 deb http://archive.canonical.com/ubuntu xenial partner
-deb-src http://archive.canonical.com/ubuntu xenial partner
+# deb-src http://archive.canonical.com/ubuntu xenial partner
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+# deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 
 
-#Netease
+# Netease
 deb http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse
+# deb http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse
+# deb-src http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse
 
 ```
 
