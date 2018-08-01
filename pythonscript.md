@@ -730,8 +730,8 @@ print("{:_^+20,.2f}".format(1234.5678))
 <centre>表4-2 正则表达式基本语法</centre>
 <table>
     <tr>
-        <th width=15%, bgcolor=yellow >正则表达式</th>
-        <th width=15%, bgcolor=yellow>描述</th>
+        <th width=8%, bgcolor=yellow >正则表达式</th>
+        <th width=20%, bgcolor=yellow>描述</th>
         <th width=50%, bgcolor=yellow>示例</th>
     </tr>
     <tr>
