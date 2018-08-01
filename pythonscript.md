@@ -728,6 +728,73 @@ print("{:_^+20,.2f}".format(1234.5678))
 ```
 ## 4.2正则表达式
 <centre>表4-2 正则表达式基本语法</centre>
+<table>
+    <tr>
+        <th width=15%, bgcolor=yellow >正则表达式</th>
+        <th width=15%, bgcolor=yellow>描述</th>
+        <th width=50%, bgcolor=yellow>示例</th>
+    </tr>
+    <tr>
+        <td>^</td>    
+        <td>行起始标记</td>
+        <td>^imp匹配以imp起始的行</td>
+    </tr>
+    <tr>
+        <td>$</td>
+        <td>行尾标记</td>
+        <td>import$匹配以import结尾的行</td>
+    </tr>
+    <tr>
+        <td>.</td>
+        <td>匹配任意一个字符</td>
+        <td>linu.匹配linux和linus</td>
+    </tr>
+    <tr>
+        <td>[]</td>
+        <td>匹配包含在[字符]之中的任意字符</td>
+        <td>coo[kl]可以匹配cook和cool</td>
+    </tr>
+    <tr>
+        <td>[^]</td>
+        <td>匹配包含在[^字符]之外的任意字符</td>
+        <td>9[^01]不能匹配到91和90</td>
+    </tr>
+    <tr>
+        <td>[-]</td>
+        <td>匹配[]中指定范围的任意字符</td>
+        <td>[1-5]匹配1~5，[a-z]匹配a~z</td>
+    </tr>
+    <tr>
+        <td>?</td>
+        <td>匹配之前项的1次或0次</td>
+        <td>hel?o匹配hello或helo,但不能匹配he</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>匹配之前项的1次或多次</td>
+        <td>hel+可以匹配hel和hell,但不能匹配he</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>匹配之前项的0次或多次</td>
+        <td>hel+*匹配he,hel,hell</td>
+    </tr>
+    <tr>
+        <td>{n}</td>
+        <td>匹配之前项的n次</td>
+        <td>[0-9]{3}匹配任意一个三位数</td>
+    </tr>
+    <tr>
+        <td>{n,}</td>
+        <td>之前的项至少需要匹配n次</td>
+        <td>[0-9]{3,}匹配一个三位数或更多的数字</td>
+    </tr>
+    <tr>
+        <td>{n,m}</td>
+        <td>指定之前的项至少需要匹配n次</td>
+        <td>[0-9]{2,5}匹配从两位数到五位数之间的任意一个数字</td>
+    </tr>
+</table>
 
 
 
