@@ -19,6 +19,8 @@ ubuntuguide
 ```$ sudo vi /etc/apt/sources.list```  
 >use vim tool command 
 ![vim](https://github.com/bastamon/ubuntuguide/blob/master/vim%E5%B8%B8%E7%94%A8.png)
+
+
 ```
 #sjtu(上海交通大学更新服务器)
 deb http://ftp.sjtu.edu.cn/ubuntu/ lucid main multiverse restricted universe
@@ -31,6 +33,24 @@ deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-backports main multiverse restricte
 deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-proposed main multiverse restricted universe
 deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-security main multiverse restricted universe
 deb-src http://ftp.sjtu.edu.cn/ubuntu/ lucid-updates main multiverse restricted universe  
+
+
+
+# tongji
+deb https://mirrors.tongji.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tongji.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.tongji.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
+
 
 # Northeastern University
 deb-src http://mirror.neu.edu.cn/ubuntu/ xenial main restricted #Added by software-properties
