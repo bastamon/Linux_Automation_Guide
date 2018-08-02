@@ -20,8 +20,7 @@ $conda info --envs
 $deactivate python27    #等价$activate root
 $conda remove --name python27 --all #移除
 ```
-* 复制一个环境
-通过克隆来复制一个环境。这儿将通过克隆snowfllakes来创建一个称为flowers的副本。
+* 复制一个环境,通过克隆来复制一个环境。这儿将通过克隆snowfllakes来创建一个称为flowers的副本。
 ```$conda create -n py36bak --clone py36```
 
 > python提供了查询的接口在代码中可以直接打印出来看, 可以帮助查询官方模块的功能的路径。
