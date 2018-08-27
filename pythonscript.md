@@ -625,7 +625,7 @@ s = "hello"
 s[0] = 'H'
 ```
 会引起Traceback, TypeError,
->由于Python字符串不可变的特性，对字符串进行操作只会得到一个新的字符串:
+> 由于Python字符串不可变的特性，对字符串进行操作只会得到一个新的字符串:
 
 ### 4.1.3 字符串函数
 * 1.通用操作
@@ -828,10 +828,134 @@ print(re.findall('python [0-9]\.[0-9]\.[0-9]',data,flags=re.IGNORECASE))
 ```
 text = "Beautiful is better than ugly. Explicit is better than implicit."
 print(re.findall('Beautiful.*\.',text))
-print(re.findall('Beautiful.*？\.',text)) # 只需在匹配字符串时加上一个"?" 
+print(re.findall('Beautiful.*？\.',text)) # 如果要使用非贪婪匹配,只需在匹配字符串时加上一个"?" 
 ```
 
 ## 4.4 Jinja2模板
+是web开发中广泛使用的模板语言Jinja2. 
+
+它能够有效的将业务逻辑和页面逻辑分开，使代码可读性增强、并且更加容易理解和维护。
+
+模板简单来说就是一个响应文本的文件，其中包含用展位变量表示的动态部分，模板文件在经过动态赋值后，返回给用户,其具体值只在请求的上下文中才能知道。
+
+使用真实的值替换变量，再返回最终得到的响应字符串，这一过程称为渲染
+
+例：python标准库自带的模板
+```
+from string import Template
+s = Template('$who is a $role')
+s.substitute(who = 'bob', role = 'teacher')
+print(s)
+s.substitute(who = 'lily', role = 'student')
+print(s)
+```
+## 4.4.2 Jinja2语法入门
+* 1.语法块
+在Jinja2中存在三种语法:
+> 控制变量{%%}
+> 变量取值{{}}
+> 注释{##}
+使用Jinja控制结构和注释的例子:
+```
+{# note: disabled template because we no longer use this
+    {% for user in users %}
+        ...
+    {%endfor%}
+#}
+
+{% if users %}
+    <ul>
+    {% for user in users %}
+        <li>{{ user.username }}</li>
+    {% endfor %}
+{% endif %}
+```
+* 2.变量
+```
+<p>A value from a dicectory:{{ mydict['key'] }}.</p>
+<p>A value from a list:{{ mylist[3] }}.</p>
+<p>A value from a list, with a variable index: {{ mylist[myintvar] }}.</p>
+<p>A value from a object:{{ myobject.somemethod() }}.</p>
+```
+* 3.Jinja2中的过滤器
+
+<tbody>
+    <tr align="center">
+        <td>过滤器名称</td>
+        <td>&nbsp; &nbsp; 说明&nbsp; &nbsp;&nbsp;</td>
+    </tr>
+    <tr align="center">
+        <td>safe</td>
+        <td>&nbsp;渲染时值不转义</td>
+    </tr>
+    <tr align="center">
+        <td>capitialize</td>
+        <td>&nbsp;把值的首字母转换成大写，其他子母转换为小写</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;lower</td>
+        <td>&nbsp;把值转换成小写形式&nbsp;</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;upper</td>
+        <td>&nbsp;把值转换成大写形式&nbsp;</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;title</td>
+        <td>&nbsp;把值中每个单词的首字母都转换成大写</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;trim</td>
+        <td>&nbsp;把值的首尾空格去掉</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;striptags</td>
+        <td>&nbsp;渲染之前把值中所有的HTML标签都删掉</td>
+    </tr>
+    <tr align="center">
+        <td>join&nbsp;</td>
+        <td>&nbsp;拼接多个值为字符串</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;replace</td>
+        <td>&nbsp;替换字符串的值</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;round</td>
+        <td>&nbsp;默认对数字进行四舍五入，也可以用参数进行控制</td>
+    </tr>
+    <tr align="center">
+        <td>int&nbsp;</td>
+        <td>&nbsp;把值转换成整型</td>
+    </tr>
+</tbody>
+
+在Jinja2中，变量可以通过“过滤器”修改，过滤器与变量用管道(|)分割。多个过滤器可以链式调用，前一个过滤器的输出会作为后一个过滤器的输入。如下所示
+```
+
+```
+
+
+* 4.Jinja2的控制结构
+
+
+* 5.Jinja2的for循环
+
+
+* 6.Jinja2的宏
+
+
+
+* 7.Jinja2的继承和Super函数
+
+
+
+* 8.Jinja2的其他运算
+> 算数运算 + -  / // % * ** +* -*
+> 比较运算 == != > >= < <=
+> 逻辑运算 not and or
+
+### 4.4.3 Jinja2实战
 
 
 # 第5章 Linux系统管理
