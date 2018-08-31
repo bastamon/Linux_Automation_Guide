@@ -932,13 +932,30 @@ print(s)
 
 在Jinja2中，变量可以通过“过滤器”修改，过滤器与变量用管道(|)分割。多个过滤器可以链式调用，前一个过滤器的输出会作为后一个过滤器的输入。如下所示
 ```
-
+{{ "Hello World" | replace("Hello", "Goodbye")}}
+    -> Goodbye World
+    
+{{ "Hello World" | replace("Hello", "Goodbye") | upper}}
+    -> GOODBYE WORLD
+    
+{{ 42.55 | round}}
+    -> 43.0
+    
+{{ 42.55 | round | int }}
+    -> 43
 ```
 
 
 * 4.Jinja2的控制结构
-
-
+```
+{% if kenny.sick %}
+    Kenny is sick.
+{% elif kenny.dead %}
+    You killed Kenny! You bastard!!!
+{% else % }
+Kenny looks fine --so far
+{% endif %}
+```
 * 5.Jinja2的for循环
 
 
