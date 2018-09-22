@@ -957,7 +957,14 @@ Kenny looks fine --so far
 {% endif %}
 ```
 * 5.Jinja2的for循环
-
+在Jinja2中迭代列表：
+<h1>Members</h1>
+<u1>
+{% for user in users %}
+    <li>{{user.username}}</li>
+{% endfor%}
+</ul>
+Jinja2也可以遍历字典：
 
 * 6.Jinja2的宏
 
