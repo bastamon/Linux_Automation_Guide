@@ -376,7 +376,7 @@ logging.error('error message')
 logging.critical('critical message')
 ```
 
-一个典型的日志配置文件:
+对于复杂的项目，一般将日至配置保存到配置文件中。一个典型的日志配置文件*.cnf:
 ```
 [loggers]
 keys=root//一个名为root的logger
@@ -398,4 +398,20 @@ formatter=generic
 
 [formatter_generic]
 format=%(asctime)s%(levelname)-5.5s [%(name)s:%(lineno)s]%(message)s
+```
+
+保存该配置文件“logging.cnf”，在python代码中用logging.config模块的fileConfig函数加载该配置.
+```
+#!/usr/local/bin/python
+#-*- coding:utf-8 -*-
+import logging
+import logging.config
+
+logging.config.fileConfig('logging.cnf')    #☆☆
+
+logging.debug('debug message')
+logging.info('info message')
+logging.warn('warn message')
+logging.error('error message')
+logging.critical('critical message')
 ```

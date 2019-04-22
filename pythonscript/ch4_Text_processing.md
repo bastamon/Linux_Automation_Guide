@@ -283,7 +283,7 @@ print(s)
 ```
 * 3.Jinja2中的过滤器
 
-<tbody>
+<table>
     <tr align="center">
         <td>过滤器名称</td>
         <td>&nbsp; &nbsp; 说明&nbsp; &nbsp;&nbsp;</td>
@@ -332,7 +332,7 @@ print(s)
         <td>int&nbsp;</td>
         <td>&nbsp;把值转换成整型</td>
     </tr>
-</tbody>
+</table>
 
 在Jinja2中，变量可以通过“过滤器”修改，过滤器与变量用管道(|)分割。多个过滤器可以链式调用，前一个过滤器的输出会作为后一个过滤器的输入。如下所示
 ```
@@ -362,21 +362,116 @@ Kenny looks fine --so far
 ```
 * 5.Jinja2的for循环
 在Jinja2中迭代列表：
+```
 <h1>Members</h1>
 <u1>
 {% for user in users %}
     <li>{{user.username}}</li>
 {% endfor%}
 </ul>
+```
 Jinja2也可以遍历字典：
+```
+<dl>
+    {% for key, value in d.iteritems() %}
+        <dt>{{ key }}</dt>
+        <dd>{{ value }}</dd>
+    {% endfor %}
+</dl>
+```
+下表为Jinja2循环中可直接使用的特殊变量
+
+<table>
+    <tr align="center">
+        <td>变量</td>
+        <td>&nbsp; &nbsp; 描述&nbsp; &nbsp;&nbsp;</td>
+    </tr>
+    <tr align="center">
+        <td>loop.index</td>
+        <td>&nbsp;当前循环迭代的次数（从1开始）</td>
+    </tr>
+    <tr align="center">
+        <td>loop.index()</td>
+        <td>&nbsp;当前循环迭代的次数（从0开始）</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;loop.revindex</td>
+        <td>&nbsp;到循环结束的次数（从1开始）&nbsp;</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;loop.revindex0</td>
+        <td>&nbsp;到循环结束的次数（从0开始）&nbsp;</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;loop.first</td>
+        <td>&nbsp;第一次迭代为True，否则为False</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;loop.last</td>
+        <td>&nbsp;最后一次迭代为True，否则为False</td>
+    </tr>
+    <tr align="center">
+        <td>&nbsp;loop.length</td>
+        <td>&nbsp;序列中的项目数</td>
+    </tr>
+    <tr align="center">
+        <td>loop.cycle&nbsp;</td>
+        <td>&nbsp;在一串序列间曲子的辅助函数</td>
+    </tr>    
+</table>
+
 
 * 6.Jinja2的宏
-
+```
+{% macro input(name, type='text',  value='') %}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+{% endmacro %}
+```
+macro是关键字定义一个宏，input是宏的名称，endmacro结束宏的定义。参数name,type,value有默认值。调用时:
+```
+<p>{{ input('username', value='user') }}</p>
+<p>{{ input('password', 'password') }}</p>
+<p>{{ input('submit', 'submit', 'Submit') }}</p>
+```
 
 
 * 7.Jinja2的继承和Super函数
+如果使用JInja2进行web开发，那么继承是Jinja2是最吸引人的功能
+假设有一名为base.html的HTML文档
 
-
+```
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="style.css" />
+        <title{% block title %}{% endblock %} -My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+```
+在base.html中，{% block name %}的方式定义了3块，这些块可以在子模板中进行替换或调用
+下面是一名为index.html的HTML文档:
+```
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+    .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Index</h1>
+    <p class="important"> Welcome on my awesome homepage.</p>
+{% endblock %}
+```
+由于index.html用
+ > {% extends "base.html" %}
+ 继承了base.html，base.html中的所有内容都会在index.html中展示。在index.html中，我们重新定义了title和content这两个块的内容。
 
 * 8.Jinja2的其他运算
 > 算数运算 + -  / // % * ** +* -*
@@ -384,4 +479,15 @@ Jinja2也可以遍历字典：
 > 逻辑运算 not and or
 
 ### 4.4.3 Jinja2实战
+* 1.基本功能演示
 
+
+* 2.继承功能演示
+
+
+### 4.4.4 案例：使用Jinja2生成HTML表格和XML配置文件
+
+* 1.使用Jinja2生成HTML表格
+
+
+* 2.使用Jinja2生成XML配置文件
