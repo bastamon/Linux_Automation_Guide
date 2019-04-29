@@ -17,8 +17,24 @@ with open('data1.txt', 'r') as file:
 ```
 不推荐长句
 ```
+try: 
+    f = open('data.txt')
+    print(f.read())
+finally:
+    f.close()
 ```
+### 5.1.3 常用的文件操作函数
+```
+read() # 读取文件中所有内容
+readline() # 一次读取一行
+readlines() # 将文件按行存进列表中
 
+
+write() # 写字符到文件中，并返回写入的字符串
+writelines() # 写一个字符串列表到文件中
+with open('tmp/data.txt','w') as f:
+    print(1, 2, 'hello, world', sep = ",", file = f)
+```
 
 
 ## 5.2 文件与文件路径管理
@@ -82,3 +98,29 @@ os.path.abspath(file)#返回路径的字符串
 > filter: 返回输入列表中，符合特定的模式的文件名列表
 
 > translate: 将通配符转换为正则表达式
+
+
+```
+import os
+import fnmatch
+print(os.listdir('.'))
+name = [_ for _ in os.listdir('.') if fnmatch.fnmatch(_, '*.jpg')]
+print(name)
+name = [_ for _ in os.listdir('.') if fnmatch.fnmatch(_, '[a-c]*')]
+print(name)
+name = [_ for _ in os.listdir('.') if fnmatch.fnmatch(_, '[a-c]?.txt')]
+print(name)
+name = [_ for _ in os.listdir('.') if fnmatch.fnmatch(_, '[!a-c]*')]
+print(name)
+names = os.listdir('.')
+print(fnmatch.filter(names, "[a-c]?.txt"))
+print(fnmatch.filter(names, "[!a-c]*"))
+```
+
+### 5.3.2 使用glob找到特定的文件
+glob的作用相当于 os.listdir()加上fnmatch。使用glob后，无需调用os.listdir()获取文件列表
+
+```import glob
+glob.glob('*.jpg')
+glob.glob('[a-c]?.jpg')
+glob.glob('[!a-c]?.jpg')```
