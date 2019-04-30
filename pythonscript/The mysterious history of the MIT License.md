@@ -1,8 +1,14 @@
 I say "seemingly straightforward" because the MIT License is one of the most popular licenses used by open source software. The MIT License, Apache License, and BSD license are the main permissive licenses, a term that contrasts with reciprocal licenses like the GPL, which require source code to be made available when software is redistributed.
 
+说“看起来很简单”，是因为麻省理工学院许可证是使用开源软件中最流行的许可证之一。MIT许可证、Apache许可证和BSD许可证是目前主要的授权许可证，这一术语与GPL等互惠许可证形成鲜明对比，因为GPL要求在重新分发软件时提供源代码。
+
 Given its popularity, you'd think the license's inception would be well-documented. I found various clues that added up to a date in the late 1980s but nothing definitive. However, Keith Packard and Jim Gettys jumped on the thread to offer first-hand accounts of the license's creation. In addition to providing early examples of the license, their help also gave me the context to better understand how the license evolved over time.
 
+考虑到它们的受欢迎程度，大家可能会认为创立许可证的起源会有详细记载。我虽然找到了各种线索，这些线索加起来最早可追溯到上世纪80年代末，但都算不上是理想的证明材料。好在Keith Packard 和 Jim Gettys很快加入了讨论，并向我提供了许可创建的第一手资料。除了提供许可证的早期案例外，他们还帮助我理解许可证是如何随着时间演变的。
+
 The date? The best single answer is probably 1987. But the complete story is more complicated and even a little mysterious.
+
+许可证创立的日子大概在1987年。 但完整的故事更加复杂，甚至有些神秘。
 
 This story begins with Project Athena at the Massachusetts Institute of Technology (MIT). "Project Athena was a joint project of MIT, Digital Equipment Corporation (DEC), and IBM to produce a campus-wide distributed computing environment for educational use," says Wikipedia. Launched in 1983, it gave rise to important software that would end up being used broadly, including the X Window System and Kerberos.
 
