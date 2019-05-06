@@ -36,7 +36,7 @@ This story begins with Project Athena at the Massachusetts Institute of Technolo
 
 The X Window System specifically provides the basic framework for "drawing and moving windows on the display device and interacting with a mouse and keyboard," says [Wikipedia](https://en.wikipedia.org/wiki/X_Window_System). Version 1 of X came out in June 1984. The software reached version 11 in 1987 (hence "X11," as all subsequent releases have been called). Minor releases use nomenclature such as X10R4 or X11R7.7.
 
-引用[Wikipedia原文](https://en.wikipedia.org/wiki/X_Window_System)：X视窗系统是专门为“在显示设备上进行绘制、移动窗口以及键鼠交互”所提供的基本框架。X视窗系统的第1版虽然于1984年6月问世，但仅经过3年它就已被迭代到第11版(因此称为“X11”，也是后续所有版本的名称)。次要版本则使用诸如X10R4或X11R7.7之类的命名法。
+引用[Wikipedia]原文(https://en.wikipedia.org/wiki/X_Window_System)：X视窗系统是专门为“在显示设备上进行绘制、移动窗口以及键鼠交互”所提供的基本框架。X视窗系统的第1版虽然于1984年6月问世，但仅经过3年它就已被迭代到第11版(因此称为“X11”，也是后续所有版本的名称)。次要版本则使用诸如X10R4或X11R7.7之类的命名法。
 
 X was originally under a proprietary license but, according to Packard, what we would now call an open source license [was added](https://keithp.com/data/mit-copyright.h) to X version 6 in 1985. (I say "now call" because the term "open source" wasn't coined until [Christine Peterson](https://opensource.com/article/18/2/coining-term-open-source-software) did so in 1998.) According to Gettys, "Distributing X under license became enough of a pain that I argued we should just give it away." However, it turned out that just placing it into the public domain wasn't an option. "IBM would not touch public domain code (anything without a specific license). We went to the MIT lawyers to craft text to explicitly make it available for any purpose. I think Jerry Saltzer probably did the text with them. I remember approving of the result," Gettys added.
 
