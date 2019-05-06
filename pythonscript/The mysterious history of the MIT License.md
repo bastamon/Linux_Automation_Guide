@@ -64,7 +64,7 @@ How and why this shift happened—and even if it happened by accident—is unkno
 
 (The MIT License is not unique in such inconsistency. For example, there is a 3-Clause BSD License and an older 4-Clause one, even though there is no explicit versioning.)
 
-在这种不一致的情况下，MIT许可证并不是唯一的选择。例如，BSD许可的第3条款和一个较老的第4条款，尽管其中并没有明显针对版本控制的条款。
+在这种不一致的情况下，MIT许可证并不是唯一的选择。例如，BSD许可的第3条款和一个较老的第4条款，尽管其中并没有针对版本控制的明显条款。
 
 So, there you have it. Pick your date. Precursors from 1985. The X Consortium or X11 License variant from 1987. Or the Expat License from 1998 or 1999.
 
