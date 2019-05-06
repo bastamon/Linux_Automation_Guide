@@ -52,11 +52,11 @@ Hence, there's a good argument to be made that the MIT License, also called the 
 
 But the story doesn't end there. If you look at the license used for X11 and the [approved MIT License](https://opensource.org/licenses/MIT) at the Open Source Initiative (OSI), they're not the same. Similar in spirit, but significantly different in the words used.
 
-故事并没有就此结束。如果您仔细查看X11的使用许可证和开放源码计划(OSI)中已[批准的MIT许可证]((https://opensource.org/licenses/MIT))，二者内容是不一样的。虽然在精神上相似，但在措辞上就有明显不同。
+但故事并没有就此结束。如果您仔细查看X11的使用许可证和开放源码计划(OSI)中已[批准的MIT许可证]((https://opensource.org/licenses/MIT))，二者内容是不一样的。虽然在精神上相似，但在措辞上就有明显不同。
 
-The "modern" MIT License is the same as the license used for the Expat XML parser library beginning in about 1998. The MIT License using this text was part of the first group of licenses approved by the OSI in 1999. What's peculiar is that, although the OSI described it as "The MIT license (sometimes called called [sic] the 'X Consortium license')," it is not in fact the same as the X Consortium License.
+The "modern" MIT License is the same as the license used for the Expat XML parser library beginning in about 1998. The MIT License using this text was part of [the first group of licenses](http://web.archive.org/web/20000815055529/http:/www.opensource.org/licenses/) approved by the OSI in 1999. What's peculiar is that, although the OSI described it as "The MIT license (sometimes called called [sic] the 'X Consortium license')," it is not in fact the same as the X Consortium License.
 
-“现代”MIT许可证与1998年用在Expat XML解析器库的许可证相同。采用该本文的MIT许可证是1999年由OSI计划第一批批准的一部分。怪的是，尽管OSI计划将其描述为“MIT许可证(有时也称为【原文】‘X财团许可证’)”，但它实际上与X财团许可证并不相同。
+“现代”MIT许可证与1998年用在Expat XML解析器库的许可证相同。采用该本文的MIT许可证是1999年由OSI计划[第一批许可证中](http://web.archive.org/web/20000815055529/http:/www.opensource.org/licenses/)被批准的一部分。怪的是，尽管OSI计划将其描述为“MIT许可证(有时也称为【原文】‘X财团许可证’)”，但它实际上与X财团许可证并不相同。
 
 How and why this shift happened—and even if it happened by accident—is unknown. But it's clear that by 1999, the approved version of the MIT License, as documented by the OSI, used language different from the X Consortium License. This is the reason why some, including the Free Software Foundation, prefer to avoid the "MIT License" terminology entirely, given that it can refer to several related, but different, licenses.
 
