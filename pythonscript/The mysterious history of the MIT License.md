@@ -20,7 +20,7 @@ Recently, [David Humphrey posed](https://twitter.com/humphd/status/1112747178685
 
 I say "seemingly straightforward" because the MIT License is one of the most popular licenses used by open source software. The MIT License, Apache License, and BSD license are the main permissive licenses, a term that contrasts with reciprocal licenses like the GPL, which require source code to be made available when software is redistributed.
 
-说“看似直截了当”，这是因为麻省理工学院许可证是使用开源软件中最流行的许可证之一。MIT许可证、Apache许可证和BSD许可证是目前主要的授权许可证，这一术语与GPL等互惠许可证形成鲜明对比，因为GPL要求在重新分发软件时提供源代码。
+说“看似直截了当”，是因为麻省理工学院许可证是使用开源软件中最流行的许可证之一。MIT许可证、Apache许可证和BSD许可证是目前主要的授权许可证，这一术语与GPL等互惠许可证形成鲜明对比，因为GPL要求在重新分发软件时提供源代码。
 
 Given its popularity, you'd think the license's inception would be well-documented. I found various clues that added up to a date in the late 1980s but nothing definitive. However, [Keith Packard](https://twitter.com/keith_x11) and [Jim Gettys](https://twitter.com/JimGettys) jumped on the [thread](https://web.archive.org/web/20190402160714/https:/gist.github.com/humphd/2832b267ee1dfc0329a58a638bc20d4c) to offer first-hand accounts of the license's creation. In addition to providing early examples of the license, their help also gave me the context to better understand how the license evolved over time.
 
