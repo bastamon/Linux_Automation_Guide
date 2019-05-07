@@ -76,4 +76,4 @@ Thanks to the participants in [this Twitter thread](https://web.archive.org/web/
 
 # ![Author](https://opensource.com/sites/default/files/styles/profile_pictures/public/pictures/gordon300dpi-1.jpg?itok=oLxiMrKc)关于作者
 
-**Gordon Haff** - Gordon Haff是红帽公司的技术传道者，经常在客户和行业活动上发表演讲，同时也帮助红帽公司为云解决方案的整个投资组合中制定战略。除了其他刊物，他也是《电脑和应用程序的锅碗瓢盆:软件如何学会自我包装》(Pots and Vats to computer and Apps: How Software Learned to Package Itself)一书的作者之一。在加入红帽公司之前，戈登撰写的数百条研究笔记常被《纽约时报》等出版物所引用，内容涉及广泛的IT话题，等等。
+**Gordon Haff** - Gordon Haff是红帽公司的技术传道者，经常在客户和行业活动上发表演讲，同时也帮助红帽公司为云解决方案的整个投资组合中制定战略。除了其他刊物，他也是《电脑和应用程序的锅碗瓢盆:软件如何学会自我包装》(Pots and Vats to computer and Apps: How Software Learned to Package Itself)一书的作者之一。在加入红帽公司之前，戈登撰写的数百条研究笔记也常被《纽约时报》等出版物所引用，内容涉及广泛的IT话题，等等。
