@@ -138,7 +138,7 @@ images = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']
 matches = []
 for root, dirnames, filenames in os.walk(os.path.expanduser("~lmx/t")):
     if 'exclude_dir' in dirnames:
-        dirnames.remove('exclude_dir')
+        dirnames.remove('exclude_dir') # 利用remove移除不想遍历的子目录
     for extensions in images:
         for filename in fnmatch.filter(filenames,extensions):
             matches.append(os.path.join(root, filename))
