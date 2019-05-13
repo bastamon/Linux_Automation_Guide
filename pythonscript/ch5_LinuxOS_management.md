@@ -123,11 +123,12 @@ glob的作用相当于 os.listdir()加上fnmatch。使用glob后，无需调用o
 ```import glob
 glob.glob('*.jpg')
 glob.glob('[a-c]?.jpg')
-glob.glob('[!a-c]?.jpg')```
+glob.glob('[!a-c]?.jpg')
+```
 
 ### 5.3.3 使用os.walk遍历目录
 walk函数便利某个目录及其子目录，对于每个目录，walk返回一个三元组(dirpath, dirnames, filenames)。其中,dirpath保存的是当前目录，dirnames是当前目录下的子目录列表，filenames是当前目录下的文件列表。
-···
+```
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
 import os
@@ -142,4 +143,4 @@ for root, dirnames, filenames in os.walk(os.path.expanduser("~lmx/t")):
         for filename in fnmatch.filter(filenames,extensions):
             matches.append(os.path.join(root, filename))
             print(matches)
-···
+```
